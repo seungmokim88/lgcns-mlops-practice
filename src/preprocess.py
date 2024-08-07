@@ -24,6 +24,10 @@ def extract_floor(floor_info: str) -> int:
         floor_info (str): 층수 정보
     """
     # TODO
+    split_floor_info = floor_info.split()
+    floor_str = split_floor_info[0]
+
+    return int(floor_str) if floor_str.isnumeric() else 0
 
 
 def floor_extractor(df: pd.DataFrame, col: str) -> pd.DataFrame:
